@@ -1,0 +1,36 @@
+{
+  "name": "prototype",
+  "version": "0.1.0",
+  "description": "Application prototype",
+  "main": "src/index.js",
+  "scripts": {
+    "dist": "webpack --config etc/webpack.dist.js",
+    "start": "webpack-dev-server --config etc/webpack.dev.js",
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimzhan/prototype.git"
+  },
+  "keywords": [
+    "application",
+    "node",
+    "javascript"
+  ],
+  "author": "Jim Zhan <jim.zhan@me.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jimzhan/prototype/issues"
+  },
+  "homepage": "https://github.com/jimzhan/prototype#readme",
+  "devDependencies": {
+    "progress-bar-webpack-plugin": "^1.9.2",
+    "typescript": "^2.1.4",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^2.3.1"
+  },
+  "dependencies": {
+    "awesome-typescript-loader": "^3.0.0-beta.17"
+  }
+}
