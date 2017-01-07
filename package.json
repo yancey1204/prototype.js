@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jimzhan/prototype.git"
+    "url": "git+https://github.com/jimzhan/prototype.js.git"
   },
   "keywords": [
     "application",
@@ -20,9 +20,9 @@
   "author": "Jim Zhan <jim.zhan@me.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/jimzhan/prototype/issues"
+    "url": "https://github.com/jimzhan/prototype.js/issues"
   },
-  "homepage": "https://github.com/jimzhan/prototype#readme",
+  "homepage": "https://github.com/jimzhan/prototype.js#readme",
   "devDependencies": {
     "progress-bar-webpack-plugin": "^1.9.2",
     "typescript": "^2.1.4",
