@@ -1,1 +1,5 @@
-console.log('hello prototype.js');
+import xs from 'xstream';
+import { run } from '@cycle/xstream-run';
+import { makeDOMDriver } from '@cycle/dom';
+
+console.log('hello typescript');

@@ -25,12 +25,16 @@
   "homepage": "https://github.com/jimzhan/prototype.js#readme",
   "devDependencies": {
     "progress-bar-webpack-plugin": "^1.9.2",
-    "typescript": "^2.1.4",
+    "typings": "^2.1.0",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
     "webpack-merge": "^2.3.1"
   },
   "dependencies": {
-    "awesome-typescript-loader": "^3.0.0-beta.17"
+    "@cycle/dom": "^14.3.0",
+    "@cycle/xstream-run": "^4.2.0",
+    "awesome-typescript-loader": "^3.0.0-beta.17",
+    "typescript": "^2.1.4",
+    "xstream": "^9.3.0"
   }
 }
