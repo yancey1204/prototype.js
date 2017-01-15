@@ -1,11 +1,9 @@
 'use strict'
-
 var path = require('path')
 var webpack = require('webpack')
 var merge = require('webpack-merge')
 var WebpackDevServer = require('webpack-dev-server')
 var ProgressBarPlugin = require('progress-bar-webpack-plugin')
-var { CheckerPlugin } = require('awesome-typescript-loader')
 
 var shared = require('./webpack.shared')
 
@@ -22,8 +20,7 @@ var config = merge(shared, {
   devtool: 'source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new ProgressBarPlugin(),
-    new CheckerPlugin()
+    new ProgressBarPlugin()
   ]
 })
 

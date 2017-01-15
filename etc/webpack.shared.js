@@ -1,9 +1,7 @@
 'use strict'
-
 var path = require('path')
 var webpack = require('webpack')
 var ProgressBarPlugin = require('progress-bar-webpack-plugin')
-var { CheckerPlugin } = require('awesome-typescript-loader')
 
 var distdir = 'dist';
 
@@ -16,19 +14,18 @@ module.exports = {
     path: path.join(process.cwd(), distdir)
   },
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['', '.js', '.jsx']
   },
   module: {
     loaders: [
       {
-        test: /\.ts$/,
-        loader: 'awesome-typescript'
+        test: /\.jsx?$/,
+        loader:  'babel-loader?presets[]=es2015'
       }
     ]
   },
   plugins: [
     new ProgressBarPlugin(),
-    new CheckerPlugin(),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development') },
     })

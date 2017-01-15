@@ -1,6 +1,7 @@
 import xs from 'xstream';
+import { Stream } from 'xstream';
 import { run } from '@cycle/xstream-run';
-import { makeDOMDriver, h1 } from '@cycle/dom';
+import { div, label, hr, h1, input, makeDOMDriver } from '@cycle/dom';
 
 
 function main() {
