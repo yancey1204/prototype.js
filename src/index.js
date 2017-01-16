@@ -4,15 +4,32 @@ import { run } from '@cycle/xstream-run';
 import { div, label, hr, h1, input, makeDOMDriver } from '@cycle/dom';
 
 
-function main() {
-  const sinks = {
-    DOM: xs.periodic(1000).map(index => h1(`${index} seconds elapsed`))
-  };
-  return sinks;
+function intent({DOM}) {
+  const state$ = {
+    username$: DOM.select('.field').events('input').map(ev => ev.target.value).startWith('')
+  }
+  return state$;
 }
 
-const drivers = {
-  DOM: makeDOMDriver('#app')
-};
+function model({username$}) {
+  const state$ = username$.map(username => username ? `Hello ${username}` : 'Please enter your username');
+  return state$;
+}
 
-run(main, drivers);
+function view(state$) {
+  const vtree$ = state$.map(msg => div('form', [
+    label('Username'),
+    input('.field', {attrs: {type: 'text'}}),
+    hr(),
+    h1(msg),
+  ]));
+  return vtree$;
+}
+
+function main(src) {
+  return { DOM: view(model(intent(src))) };
+}
+
+run(main, { 
+  DOM: makeDOMDriver('#app') 
+});
