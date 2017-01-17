@@ -4,8 +4,12 @@
   "description": "Application prototype",
   "main": "src/index.js",
   "scripts": {
+    "predist": "npm run test",
     "dist": "webpack --config etc/webpack.dist.js",
+    "lint": "eslint src --ext=.js,jsx",
+    "prestart": "npm run lint",
     "start": "webpack-dev-server --config etc/webpack.dev.js",
+    "pretest": "npm run lint",
     "test": "npm run test"
   },
   "repository": {
@@ -29,6 +33,11 @@
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-register": "^6.18.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
     "progress-bar-webpack-plugin": "^1.9.2",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
