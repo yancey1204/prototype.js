@@ -4,11 +4,11 @@
   "description": "Application prototype",
   "main": "src/index.js",
   "scripts": {
-    "dist": "webpack --config etc/webpack.dist.js",
+    "dist": "webpack --config etc/webpack.config.dist.js",
     "lint": "eslint src --ext=.js,jsx",
     "clean": "rimraf dist",
     "prestart": "npm run clean",
-    "start": "webpack --config etc/webpack.dev.js && webpack-dev-server --config etc/webpack.dev.js",
+    "start": "webpack --config etc/webpack.config.dev.js && node lib/devserver.js",
     "test": "npm run test"
   },
   "repository": {
