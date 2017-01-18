@@ -16,7 +16,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         loader: 'babel-loader?presets[]=es2015',
