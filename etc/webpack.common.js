@@ -1,8 +1,10 @@
-var path = require('path');
-var webpack = require('webpack');
-var ProgressBarPlugin = require('progress-bar-webpack-plugin');
+import path from 'path';
+/* eslint-disable import/no-extraneous-dependencies */
+import webpack from 'webpack';
+import ProgressBarPlugin from 'progress-bar-webpack-plugin';
+/* eslint-enable import/no-extraneous-dependencies */
 
-var distdir = 'dist';
+const distdir = path.join(__dirname, '..', 'dist');
 
 module.exports = {
   entry: [
@@ -10,16 +12,16 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: path.join(process.cwd(), distdir),
+    path: distdir,
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader?presets[]=es2015',
+        use: 'babel-loader',
       },
     ],
   },

@@ -8,7 +8,7 @@ TODOs
 - [x] webpack multi-setting profiles
 - [x] webpack HTML plugin
 - [x] webpack settings merges
-- [ ] webpack settings to ES6 
+- [x] webpack settings to ES6 
 - [ ] cycle + Rx.js skeleton
 - [ ] unit test integration
 - [ ] example apps
