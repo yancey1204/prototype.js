@@ -12,7 +12,7 @@
     "build": "webpack --config etc/webpack.dev.babel.js",
     "prestart": "npm run build",
     "start": "babel-node --presets node6 lib/devserver.js",
-    "test": "npm run test"
+    "test": "mocha --require ignore-styles --compilers js:babel-core/register --recursive src/**/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -51,7 +51,11 @@
   "dependencies": {
     "@cycle/dom": "^14.3.0",
     "@cycle/xstream-run": "^4.2.0",
+    "chai": "^3.5.0",
+    "ignore-styles": "^5.0.1",
+    "mocha": "^3.2.0",
     "snabbdom-jsx": "^0.3.1",
+    "superagent": "^3.3.2",
     "xstream": "^9.3.0"
   }
 }
