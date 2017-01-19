@@ -7,6 +7,7 @@
     "dist": "webpack --config etc/webpack.dist.babel.js",
     "lint": "eslint src --ext=.js,jsx",
     "clean": "rimraf dist",
+    "purge": "rimraf dist node_modules",
     "prebuild": "npm run clean",
     "build": "webpack --config etc/webpack.dev.babel.js",
     "prestart": "npm run build",
